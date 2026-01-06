@@ -163,7 +163,7 @@ function TimelineCalendar({ progetti, onEdit, onDelete }: {
   const minAnno = Math.min(...progetti.map(p => p.anno_inizio));
   const maxAnno = Math.max(...progetti.map(p => p.anno_fine || new Date().getFullYear()));
   
-  const anni = [];
+  const anni: number[] = [];
   for (let anno = minAnno; anno <= maxAnno; anno++) {
     anni.push(anno);
   }
