@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy Script",
+            "type": "shell",
+            "command": "${workspaceFolder}/deploy.sh",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🚀 Deploy App",
+            "type": "node",
+            "request": "launch",
+            "preLaunchTask": "Deploy Script",
+            "program": "${workspaceFolder}/node_modules/.bin/next",
+            "args": ["--version"],
+            "skipFiles": ["<node_internals>/**"],
+            "console": "integratedTerminal"
+        } , {
+            "name": "🔥 Run Dev Server (port 4001)",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run", "dev"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            "serverReadyAction": {
+                "pattern": "- Local:.*(https?://\\S+)",
+                "uriFormat": "http://localhost:4001",
+                "action": "openExternally"
+            }
+        }
+    ]
+}
