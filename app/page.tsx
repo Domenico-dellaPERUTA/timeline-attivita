@@ -183,7 +183,7 @@ function TimelineCalendar({ progetti, onEdit, onDelete }: {
       ? (progetto.anno_fine - minAnno) * 12 + progetto.mese_fine - 1
       : (maxAnno - minAnno + 1) * 12 - 1;
     
-    const monthWidth = 50; // larghezza fissa di ogni mese in px
+    const monthWidth = 51; // larghezza fissa di ogni mese in px
     const left = startMonth * monthWidth;
     const width = (endMonth - startMonth + 1) * monthWidth;
     
@@ -501,7 +501,7 @@ const styles: any = {
   monthLabel: { width: '51px', minWidth: '51px', textAlign: 'center', fontSize: '10px', color: '#999', padding: '0', flexShrink: 0 },
   
   timelineBodyWrapper: { display: 'flex', flexDirection: 'column' },
-  timelineRowWrapper: { display: 'flex', borderBottom: '1px solid #f0f0f0', minHeight: '80px' },
+  timelineRowWrapper: { display: 'flex', borderBottom: '1px solid #f0f0f0', minHeight: '100px' },
   
   fixedColumnCell: { width: '200px', padding: '10px', borderRight: '1px solid #f0f0f0', display: 'flex', flexDirection: 'column', justifyContent: 'center' },
   fixedColumnCellDesc: { width: '300px', padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '2px solid #e0e0e0' },
@@ -511,12 +511,12 @@ const styles: any = {
   progettoActions: { display: 'flex', gap: '6px' },
   smallBtn: { background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', padding: '2px' },
   
-  descrizioneTruncate: { fontSize: '12px', color: '#666', lineHeight: '1.4', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', marginBottom: '6px' },
+  descrizioneTruncate: { fontSize: '12px', color: '#666', lineHeight: '1.4', overflow: 'hidden', textOverflow: 'ellipsis', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', marginBottom: '6px' },
   tecnologiaSmall: { fontSize: '11px', color: '#999' },
   
   scrollableRow: { flex: 1, overflowX: 'auto', overflowY: 'hidden', position: 'relative', cursor: 'grab' },
   scrollableRowHidden: { overflowX: 'hidden' },
-  timelineRowGrid: { position: 'relative', height: '80px' },
+  timelineRowGrid: { position: 'relative', height: '100px' },
   gridBackground: { display: 'flex', position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 },
   yearGrid: { display: 'flex' },
   monthGrid: { width: '50px', minWidth: '50px', flexShrink: 0, borderRight: '1px solid #f5f5f5' },
